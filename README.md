@@ -66,6 +66,18 @@ This repository documents my hands-on system audit and hardening of a macOS lapt
 
 ---
 
+### 6. macOS Firewall Hardening
+
+- ✅ Enabled the macOS application firewall via System Settings
+- ✅ Turned on **Stealth Mode** to prevent unsolicited inbound traffic
+- ✅ Reviewed and removed unnecessary app exceptions in Firewall Options
+- ✅ Verified firewall was active via Terminal:
+  ```bash
+  /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
+  ```
+
+  ---
+
 ## Key Commands Used
 
 - `sudo lsof -i :PORT` – identify which process is listening
@@ -79,7 +91,6 @@ This repository documents my hands-on system audit and hardening of a macOS lapt
 
 ## What's Left / Next Steps
 
-- [ ] Enable macOS firewall (next step)
 - [ ] Log changes and scan ports after reboot
 - [ ] Review outbound network traffic using tools like `Little Snitch` or `LuLu`
 
